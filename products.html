@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse our collection of premium photo frames - A3, A4, Desktop, and Wall frames at Single Click Studio.">
+    <title>Products - Single Click Studio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="logo.png" alt="Taswin Studio" class="logo-image" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <h1 style="display: none;">Single Click Studio</h1>
+                    </a>
+                </div>
+                <div class="header-contact">
+                    <a href="tel:8220193883" class="phone-link">📞 8220193883</a>
+                </div>
+                <nav class="nav-menu" id="navMenu">
+                    <a href="index.html">Home</a>
+                    <a href="products.html" class="active">Products</a>
+                    <a href="customize.html">Customize</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="admin.html" class="admin-link">Admin</a>
+                </nav>
+                <a href="cart.html" class="cart-icon-link" id="cartIcon">
+                    🛒
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </a>
+                <button class="menu-toggle" id="menuToggle">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Products Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Products</h1>
+            <p>Choose from our wide range of premium photo frames</p>
+        </div>
+    </section>
+
+    <!-- Products by Category -->
+    <section class="products-page">
+        <div class="container">
+            <!-- A3 Frames -->
+            <div class="category-section">
+                <h2 class="category-title">A3 Frames</h2>
+                <div class="products-grid">
+                    <div class="product-card" data-product-id="1" data-product-name="A3 Premium Frame" data-product-price="599">
+                        <div class="product-image"><img src="" alt="A3 Premium Frame" onerror="this.style.display='none'; this.parentElement.innerHTML='🖼️';"></div>
+                        <h3>A3 Premium Frame</h3>
+                        <p class="price">₹599</p>
+                        <button class="btn btn-secondary" onclick="addProductToCart('1')">Add to Cart</button>
+                        <a href="customize.html?productId=1" class="btn btn-secondary" style="margin-top: 0.5rem;">Customize</a>
+                    </div>
+                    <div class="product-card" data-product-id="2" data-product-name="A3 Deluxe Frame" data-product-price="799">
+                        <div class="product-image"><img src="" alt="A3 Deluxe Frame" onerror="this.style.display='none'; this.parentElement.innerHTML='🖼️';"></div>
+                        <h3>A3 Deluxe Frame</h3>
+                        <p class="price">₹799</p>
+                        <button class="btn btn-secondary" onclick="addProductToCart('2')">Add to Cart</button>
+                        <a href="customize.html?productId=2" class="btn btn-secondary" style="margin-top: 0.5rem;">Customize</a>
+                    </div>
+                    <div class="product-card" data-product-id="3" data-product-name="A3 Elegant Frame" data-product-price="699">
+                        <div class="product-image"><img src="" alt="A3 Elegant Frame" onerror="this.style.display='none'; this.parentElement.innerHTML='🖼️';"></div>
+                        <h3>A3 Elegant Frame</h3>
+                        <p class="price">₹699</p>
+                        <button class="btn btn-secondary" onclick="addProductToCart('3')">Add to Cart</button>
+                        <a href="customize.html?productId=3" class="btn btn-secondary" style="margin-top: 0.5rem;">Customize</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- A4 Frames -->
+            <div class="category-section">
+                <h2 class="category-title">A4 Frames</h2>
+                <div class="products-grid">
+                    <div class="product-card" data-product-id="4" data-product-name="A4 Classic Frame" data-product-price="399">
+                        <div class="product-image"><img src="" alt="A4 Classic Frame" onerror="this.style.display='none'; this.parentElement.innerHTML='🖼️';"></div>
+                        <h3>A4 Classic Frame</h3>
+                        <p class="price">₹399</p>
+                        <button class="btn btn-secondary" onclick="addProductToCart('4')">Add to Cart</button>
+                        <a href="customize.html?productId=4" class="btn btn-secondary" style="margin-top: 0.5rem;">Customize</a>
+                    </div>
+                    <div class="product-card" data-product-id="5" data-product-name="A4 Premium Frame" data-product-price="499">
+                        <div class="product-image"><img src="" alt="A4 Premium Frame" onerror="this.style.display='none'; this.parentElement.innerHTML='🖼️';"></div>
+                        <h3>A4 Premium Frame</h3>
+                        <p class="price">₹499</p>
+                        <button class="btn btn-secondary" onclick="addProductToCart('5')">Add to Cart</button>
+                        <a href="customize.html?productId=5" class="btn btn-secondary" style="margin-top: 0.5rem;">Customize</a>
+                    </div>
+                    <div class="product-card" data-product-id="6" data-product-name="A4 Modern Frame" data-product-price="449">
+                        <div class="product-image"><img src="" alt="A4 Modern Frame" onerror="this.style.display='none'; this.parentElement.innerHTML='🖼️';"></div>
+                        <h3>A4 Modern Frame</h3>
+                        <p class="price">₹449</p>
+                        <button class="btn btn-secondary" onclick="addProductToCart('6')">Add to Cart</button>
+                        <a href="customize.html?productId=6" class="btn btn-secondary" style="margin-top: 0.5rem;">Customize</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop Frames -->
+            <div class="category-section">
+                <h2 class="category-title">Desktop Frames</h2>
+                <div class="products-grid">
+                    <div class="product-card" data-product-id="7" data-product-name="Desktop Frame Set (3pc)" data-product-price="799">
+                        <div class="product-image"><img src="" alt="Desktop Frame Set (3pc)" onerror="this.style.display='none'; this.parentElement.innerHTML='🖼️';"></div>
+                        <h3>Desktop Frame Set (3pc)</h3>
+                        <p class="price">₹799</p>
+                        <button class="btn btn-secondary" onclick="addProductToCart('7')">Add to Cart</button>
+                        <a href="customize.html?productId=7" class="btn btn-secondary" style="margin-top: 0.5rem;">Customize</a>
+                    </div>
+                    <div class="product-card" data-product-id="8" data-product-name="Desktop Premium Frame" data-product-price="599">
+                        <div class="product-image"><img src="" alt="Desktop Premium Frame" onerror="this.style.display='none'; this.parentElement.innerHTML='🖼️';"></div>
+                        <h3>Desktop Premium Frame</h3>
+                        <p class="price">₹599</p>
+                        <button class="btn btn-secondary" onclick="addProductToCart('8')">Add to Cart</button>
+                        <a href="customize.html?productId=8" class="btn btn-secondary" style="margin-top: 0.5rem;">Customize</a>
+                    </div>
+                    <div class="product-card" data-product-id="9" data-product-name="Desktop Mini Frame" data-product-price="299">
+                        <div class="product-image"><img src="" alt="Desktop Mini Frame" onerror="this.style.display='none'; this.parentElement.innerHTML='🖼️';"></div>
+                        <h3>Desktop Mini Frame</h3>
+                        <p class="price">₹299</p>
+                        <button class="btn btn-secondary" onclick="addProductToCart('9')">Add to Cart</button>
+                        <a href="customize.html?productId=9" class="btn btn-secondary" style="margin-top: 0.5rem;">Customize</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wall Frames -->
+            <div class="category-section">
+                <h2 class="category-title">Wall Frames</h2>
+                <div class="products-grid">
+                    <div class="product-card" data-product-id="10" data-product-name="Wall Frame Collection" data-product-price="1299">
+                        <div class="product-image"><img src="" alt="Wall Frame Collection" onerror="this.style.display='none'; this.parentElement.innerHTML='🖼️';"></div>
+                        <h3>Wall Frame Collection</h3>
+                        <p class="price">₹1,299</p>
+                        <button class="btn btn-secondary" onclick="addProductToCart('10')">Add to Cart</button>
+                        <a href="customize.html?productId=10" class="btn btn-secondary" style="margin-top: 0.5rem;">Customize</a>
+                    </div>
+                    <div class="product-card" data-product-id="11" data-product-name="Wall Premium Frame" data-product-price="999">
+                        <div class="product-image"><img src="" alt="Wall Premium Frame" onerror="this.style.display='none'; this.parentElement.innerHTML='🖼️';"></div>
+                        <h3>Wall Premium Frame</h3>
+                        <p class="price">₹999</p>
+                        <button class="btn btn-secondary" onclick="addProductToCart('11')">Add to Cart</button>
+                        <a href="customize.html?productId=11" class="btn btn-secondary" style="margin-top: 0.5rem;">Customize</a>
+                    </div>
+                    <div class="product-card" data-product-id="12" data-product-name="Wall Gallery Set" data-product-price="1499">
+                        <div class="product-image"><img src="" alt="Wall Gallery Set" onerror="this.style.display='none'; this.parentElement.innerHTML='🖼️';"></div>
+                        <h3>Wall Gallery Set</h3>
+                        <p class="price">₹1,499</p>
+                        <button class="btn btn-secondary" onclick="addProductToCart('12')">Add to Cart</button>
+                        <a href="customize.html?productId=12" class="btn btn-secondary" style="margin-top: 0.5rem;">Customize</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Single Click Studio</h3>
+                    <p>Creating beautiful memories, one frame at a time.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="customize.html">Customize</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📞 <a href="tel:8220193883">8220193883</a></p>
+                    <p>💬 <a href="https://wa.me/918220193883" target="_blank">WhatsApp Us</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Single Click Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function addProductToCart(productId) {
+            const product = getProductById(productId);
+            if (product) {
+                addToCart(product);
+                alert('Product added to cart!');
+            }
+        }
+        
+        // Load product images
+        document.addEventListener('DOMContentLoaded', () => {
+            const productCards = document.querySelectorAll('.product-card[data-product-id]');
+            productCards.forEach(card => {
+                const productId = card.getAttribute('data-product-id');
+                const product = getProductById(productId);
+                if (product && product.image && product.image.startsWith('http')) {
+                    const img = card.querySelector('.product-image img');
+                    if (img) {
+                        img.src = product.image;
+                        img.style.width = '100%';
+                        img.style.height = '200px';
+                        img.style.objectFit = 'cover';
+                        img.style.borderRadius = '0.5rem';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

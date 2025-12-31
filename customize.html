@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Customize your photo frame with text, dates, and messages at Single Click Studio.">
+    <title>Customize - Single Click Studio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="logo.png" alt="Taswin Studio" class="logo-image" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <h1 style="display: none;">Single Click Studio</h1>
+                    </a>
+                </div>
+                <div class="header-contact">
+                    <a href="tel:8220193883" class="phone-link">📞 8220193883</a>
+                </div>
+                <nav class="nav-menu" id="navMenu">
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="customize.html" class="active">Customize</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="admin.html" class="admin-link">Admin</a>
+                </nav>
+                <a href="cart.html" class="cart-icon-link" id="cartIcon">
+                    🛒
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </a>
+                <button class="menu-toggle" id="menuToggle">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Customize Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Customize Your Frame</h1>
+            <p>Upload your photo and add personal touches</p>
+        </div>
+    </section>
+
+    <!-- Customize Form -->
+    <section class="customize-section">
+        <div class="container">
+            <div class="customize-wrapper">
+                <div class="customize-form">
+                    <h2>Order Details</h2>
+                    
+                    <!-- Photo Upload -->
+                    <div class="form-group">
+                        <label for="photoUpload">Upload Your Photo</label>
+                        <div class="upload-area" id="uploadArea">
+                            <input type="file" id="photoUpload" accept="image/*" hidden>
+                            <div class="upload-placeholder">
+                                <span class="upload-icon">📷</span>
+                                <p>Click to upload or drag and drop</p>
+                                <p class="upload-hint">PNG, JPG up to 10MB</p>
+                            </div>
+                            <img id="previewImage" class="preview-image" style="display: none;">
+                        </div>
+                    </div>
+
+                    <!-- Text Customization -->
+                    <div class="form-group">
+                        <label for="nameText">Name / Title</label>
+                        <input type="text" id="nameText" placeholder="Enter name or title">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dateText">Date</label>
+                        <input type="text" id="dateText" placeholder="Enter date (e.g., 2024)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="messageText">Message</label>
+                        <textarea id="messageText" rows="4" placeholder="Enter your custom message"></textarea>
+                    </div>
+
+                    <!-- Size Selection -->
+                    <div class="form-group">
+                        <label>Select Size</label>
+                        <div class="size-options">
+                            <label class="size-option">
+                                <input type="radio" name="size" value="A3" checked>
+                                <span>A3</span>
+                            </label>
+                            <label class="size-option">
+                                <input type="radio" name="size" value="A4">
+                                <span>A4</span>
+                            </label>
+                            <label class="size-option">
+                                <input type="radio" name="size" value="Desktop">
+                                <span>Desktop</span>
+                            </label>
+                            <label class="size-option">
+                                <input type="radio" name="size" value="Wall">
+                                <span>Wall</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Color Selection -->
+                    <div class="form-group">
+                        <label>Frame Color</label>
+                        <div class="color-options">
+                            <label class="color-option">
+                                <input type="radio" name="color" value="Black" checked>
+                                <span class="color-box" style="background: #000;"></span>
+                                <span>Black</span>
+                            </label>
+                            <label class="color-option">
+                                <input type="radio" name="color" value="White">
+                                <span class="color-box" style="background: #fff; border: 1px solid #ddd;"></span>
+                                <span>White</span>
+                            </label>
+                            <label class="color-option">
+                                <input type="radio" name="color" value="Brown">
+                                <span class="color-box" style="background: #8B4513;"></span>
+                                <span>Brown</span>
+                            </label>
+                            <label class="color-option">
+                                <input type="radio" name="color" value="Gold">
+                                <span class="color-box" style="background: #FFD700;"></span>
+                                <span>Gold</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Order Buttons -->
+                    <button class="btn btn-primary btn-large" id="addToCartBtn">Add to Cart</button>
+                    <button class="btn btn-secondary btn-large" id="orderBtn" style="margin-top: 0.5rem;">Order via WhatsApp</button>
+                </div>
+
+                <!-- Preview Section -->
+                <div class="preview-section">
+                    <h2>Preview</h2>
+                    <div class="frame-preview" id="framePreview">
+                        <div class="preview-frame">
+                            <div class="preview-photo" id="previewPhoto">
+                                <span>Your photo will appear here</span>
+                            </div>
+                            <div class="preview-text" id="previewText">
+                                <p id="previewName"></p>
+                                <p id="previewDate"></p>
+                                <p id="previewMessage"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Single Click Studio</h3>
+                    <p>Creating beautiful memories, one frame at a time.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="customize.html">Customize</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📞 <a href="tel:8220193883">8220193883</a></p>
+                    <p>💬 <a href="https://wa.me/918220193883" target="_blank">WhatsApp Us</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Single Click Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Add to Cart functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const addToCartBtn = document.getElementById('addToCartBtn');
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('productId') || '1'; // Default to product 1
+            
+            if (addToCartBtn) {
+                addToCartBtn.addEventListener('click', () => {
+                    const product = getProductById(productId);
+                    if (!product) {
+                        alert('Product not found!');
+                        return;
+                    }
+                    
+                    // Get customization values
+                    const name = document.getElementById('nameText')?.value || '';
+                    const date = document.getElementById('dateText')?.value || '';
+                    const message = document.getElementById('messageText')?.value || '';
+                    const size = document.querySelector('input[name="size"]:checked')?.value || '';
+                    const color = document.querySelector('input[name="color"]:checked')?.value || '';
+                    
+                    // Get photo if uploaded
+                    const photoUpload = document.getElementById('photoUpload');
+                    let photo = '';
+                    if (photoUpload && photoUpload.files.length > 0) {
+                        const reader = new FileReader();
+                        reader.onload = (e) => {
+                            photo = e.target.result;
+                            const customization = {
+                                photo: photo,
+                                name: name,
+                                date: date,
+                                message: message,
+                                size: size,
+                                color: color
+                            };
+                            addToCart(product, customization);
+                            alert('Item added to cart!');
+                            updateCartIcon();
+                        };
+                        reader.readAsDataURL(photoUpload.files[0]);
+                    } else {
+                        const customization = {
+                            name: name,
+                            date: date,
+                            message: message,
+                            size: size,
+                            color: color
+                        };
+                        addToCart(product, customization);
+                        alert('Item added to cart!');
+                        updateCartIcon();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
